@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Bangladesh | Blog</title>
+
+    <!-- Favicon link -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+
+    <!-- Tailwind & DaisyUI links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#B4F461',
+                        'secondary-color': '#F9F7F3',
+                        'border-color': '#1111111a',
+                        'text-color': '#111111B2',
+                        'title-color': '#111'
+                    },
+                    fontFamily: {
+                        'font-lexend': 'Lexend',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="">
+        <!-- Navbar Section for large device-->
+        <nav class="bg-secondary-color">
+            <div class="w-11/12 mx-auto py-5 md:px-16 md:pt-6 md:pb-16 flex justify-between items-center">
+                <div class="order-3 md:order-1">
+                    <!-- large device btn -->
+                    <a href="index.html">
+                        <button
+                            class="hidden btn bg-primary-color text-title-color px-3 py-1 md:py-3 md:px-8 text-sm md:text-xl font-bold md:flex flex-col justify-center items-center border-none hover:bg-slate-200">Home</button>
+                    </a>
+                    <!-- small device btn -->
+                    <a href="index.html">
+                        <button
+                            class="md:hidden btn btn-sm bg-primary-color text-title-color px-3 py-1 md:py-3 md:px-8 text-sm md:text-xl font-bold flex flex-col justify-center items-center border-none hover:bg-slate-200">Home</button>
+                    </a>
+                </div>
+                <div class="flex items-center gap-2 md:gap-4 order-1 md:order-2">
+                    <div class="w-9 md:w-auto"><img src="./assets/logo.png" alt="logo image"></div>
+                    <p class="text-base md:text-xl font-bold text-title-color">Donate <br class="md:hidden"> Bangladesh
+                    </p>
+                </div>
+                <div class="flex items-center gap-1 md:gap-3 order-2 md:order-3">
+                    <div class="w-5 md:w-auto"><img src="./assets/coin.png" alt="coin image"></div>
+                    <div class="text-sm md:text-xl font-bold text-text-color"><span>5500</span> BDT</div>
+                </div>
+            </div>
+        </nav>
+
+         <!-- toggle menu button -->
+         <div class="flex gap-3 md:gap-5 items-center justify-center pt-5 pb-6 md:pt-16 md:pb-8">
+            <div>
+                <button id="donation-toggle-btn"
+                    class="bg-primary-color text-title-color rounded-lg px:4 py-2 md:py-7 md:px-8 text-base md:text-xl font-bold flex flex-col justify-center items-center btn hover:bg-transparent hover:text-text-color">Donation</button>
+            </div>
+            <div>
+                <button id="history-toggle-btn"
+                    class="bg-transparent border border-[#1111114d] rounded-lg text-text-color px:4 py-2 md:py-7 md:px-8 text-base md:text-xl font-bold flex flex-col justify-center items-center btn hover:bg-primary-color hover:text-title-color">History</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- blog section -->
+        <div class="md:px-20 w-11/12 mx-auto my-5 md:my-7">
+            <div class="flex items-center gap-1 md:gap-3 justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-7 md:size-24 rotate-12">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                </svg>
+                <span class="text-lg md:text-4xl font-bold text-title-color text-center">Important FAQ</span>
+            </div>
+            <!-- faq container -->
+            <div class="space-y-3 md:space-y-5 p-3 md:p-5 mt-4 md:mt-10 border border-border-color rounded-lg">
+                <!-- question 1 -->
+                <div class="collapse collapse-arrow bg-secondary-color">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-base md:text-xl font-medium">What is the Document Object Model
+                        (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The DOM (Document Object Model) is a representation of the structure of a web page. It
+                            organizes the HTML elements of the page into a tree-like structure, where each part of the
+                            document (such as headings, paragraphs, images, etc.) is a "node." This structure allows
+                            programming languages, like JavaScript, to interact with and modify the content, layout, and
+                            style of the webpage dynamically, without needing to reload the entire page. The DOM makes
+                            websites more interactive, enabling things like form validation, content updates,
+                            animations, and more.</p>
+                    </div>
+                </div>
+
+                <!-- question 2 -->
+                <div class="collapse collapse-arrow bg-secondary-color">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-base md:text-xl font-medium">How do you select an element from the
+                        DOM?</div>
+                    <div class="collapse-content">
+                        <p>
+                            To select elements from the DOM in JavaScript:- <br>
+
+                            <li>By ID: Selects a single element with a unique id.</li>
+                            <li>By Class: Selects all elements with a specific class.</li>
+                            <li>By Tag: Selects all elements with a specific HTML tag.</li>
+                            <li>By CSS Selector: Selects elements using CSS-style rules (e.g., tag, class, id,
+                                attributes).</li>
+                            <li>By Name Attribute: Selects elements with a specific name attribute (useful for forms).
+                            </li>
+                            <li>First CSS Match: Selects the first element that matches a CSS selector.</li>
+                            <li>All CSS Matches: Selects all elements matching a given CSS selector.</li>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- question 3 -->
+                <div class="collapse collapse-arrow bg-secondary-color">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-base md:text-xl font-medium">What is event delegation in the context
+                        of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <div>
+                            <div class="mb-2">Event delegation is a technique in the DOM where you attach a single
+                                event listener to a
+                                parent element, instead of adding multiple listeners to individual child elements. This
+                                listener can capture events from child elements by taking advantage of event bubbling,
+                                where
+                                events triggered on a child element propagate up through its parent elements.</div>
+
+                            <div>
+                                <span class="font-bold mb-4">Why is it useful?</span> <br>
+                                <li>Efficiency: Reduces the number of event listeners, which is particularly helpful
+                                    when
+                                    dealing with many child elements, improving performance.</li>
+                                <li>Dynamic Content: It allows you to handle events for dynamically added elements
+                                    without
+                                    needing to attach new listeners every time elements are added or removed.</li>
+                                <li>Simpler Code: Reduces the complexity of managing individual listeners for each
+                                    child,
+                                    making
+                                    the code cleaner and more maintainable.</li>
+                            </div>
+                            <div class="mt-2">Event delegation is commonly used in scenarios like managing a list of
+                                items where the items
+                                might change dynamically (added or removed) and require event handling.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- question 4 -->
+                <div class="collapse collapse-arrow bg-secondary-color">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-base md:text-xl font-medium">How do you manipulate an element's
+                        attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <div>
+                            <p class="font-bold mb-4">You can manipulate an element's attributes and styles using the DOM in
+                                the following ways:</p>
+
+                            <div class="mb-2">
+                                1. Manipulating Attributes:
+                                Get an Attribute: You can retrieve the value of an attribute (e.g., href, src, id) from
+                                an
+                                element.
+                                Set or Update an Attribute: You can add or modify an attribute’s value.
+                                Remove an Attribute: You can remove an existing attribute from an element.
+                            </div>
+                            <div class="mb-3">
+                                2. Manipulating Styles:
+                                Inline Styles: You can directly modify an element's CSS properties through its style
+                                property (e.g., change color, background, font-size).
+                                CSS Classes: You can add, remove, or toggle CSS classes on an element, which can apply
+                                predefined styles from external stylesheets.
+                            </div>
+                            <p>
+                                By adjusting attributes and styles, you can dynamically change an element's appearance and
+                            behavior, allowing for a more interactive user experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer section -->
+    <footer class="bg-secondary-color min-h-20 md:min-h-36"></footer>
+
+    <script src="./js/utilities.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
