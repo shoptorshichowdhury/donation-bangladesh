@@ -46,7 +46,10 @@ document.getElementById("noakhali-donation-btn").addEventListener("click", funct
     //get the donation amount
     const donationAmount = getInputValueById("noakhali-donation-input");
 
-    if (!donationAmount || typeof donationAmount !== "number" || donationAmount <= 0) {
+    //current total balance
+    const TotalBalance = getInnerTextById("total-balance");
+
+    if (!donationAmount || typeof donationAmount !== "number" || donationAmount <= 0 || donationAmount > TotalBalance) {
         alert("Please input valid amount");
         return;
     };
@@ -59,13 +62,6 @@ document.getElementById("noakhali-donation-btn").addEventListener("click", funct
     document.getElementById("noakhali-donation-balance").innerText = newDonationBalance;
 
     //cut the donation amount from total balance
-    const TotalBalance = getInnerTextById("total-balance");
-
-    if (TotalBalance < donationAmount) {
-        alert("Not enough money!");
-        return;
-    }
-
     const currentTotalBalance = TotalBalance - donationAmount;
 
     //show the current total balance
@@ -93,7 +89,10 @@ document.getElementById("feni-donation-btn").addEventListener("click", function 
     //get the donation amount
     const donationAmount = getInputValueById("feni-donation-input");
 
-    if (!donationAmount || typeof donationAmount !== "number" || donationAmount <= 0) {
+    //current total balance
+    const TotalBalance = getInnerTextById("total-balance");
+
+    if (!donationAmount || typeof donationAmount !== "number" || donationAmount <= 0 || donationAmount > TotalBalance) {
         alert("Please input valid amount");
         return;
     };
@@ -106,13 +105,6 @@ document.getElementById("feni-donation-btn").addEventListener("click", function 
     document.getElementById("feni-donation-balance").innerText = newDonationBalance;
 
     //cut the donation amount from total balance
-    const TotalBalance = getInnerTextById("total-balance");
-
-    if (TotalBalance < donationAmount) {
-        alert("Not enough money!");
-        return;
-    }
-
     const currentTotalBalance = TotalBalance - donationAmount;
 
     //show the current total balance
@@ -125,7 +117,7 @@ document.getElementById("feni-donation-btn").addEventListener("click", function 
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="gap-8 p-4 md:p-8 border border-border-color rounded-xl md:space-y-4">
-        <h3 class="gap-8 p-4 md:p-8 border border-border-color rounded-xl space-y-2 md:space-y-4">${donationAmount} Taka is Donated for Flood Relief in Feni, Bangladesh</h3>
+        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount} Taka is Donated for Flood Relief in Feni, Bangladesh</h3>
         <p class="text-sm md:text-base text-text-color">Date: ${d}</p>
     </div>
     `;
@@ -141,7 +133,10 @@ document.getElementById("quota-donation-btn").addEventListener("click", function
     //get the donation amount
     const donationAmount = getInputValueById("quota-donation-input");
 
-    if (!donationAmount || typeof donationAmount !== "number" || donationAmount <= 0) {
+    //current total balance
+    const TotalBalance = getInnerTextById("total-balance");
+
+    if (!donationAmount || typeof donationAmount !== "number" || donationAmount <= 0 || donationAmount > TotalBalance) {
         alert("Please input valid amount");
         return;
     };
@@ -154,13 +149,6 @@ document.getElementById("quota-donation-btn").addEventListener("click", function
     document.getElementById("quota-donation-balance").innerText = newDonationBalance;
 
     //cut the donation amount from total balance
-    const TotalBalance = getInnerTextById("total-balance");
-
-    if (TotalBalance < donationAmount) {
-        alert("Not enough money!");
-        return;
-    }
-
     const currentTotalBalance = TotalBalance - donationAmount;
 
     //show the current total balance
@@ -173,7 +161,7 @@ document.getElementById("quota-donation-btn").addEventListener("click", function
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="gap-8 p-4 md:p-8 border border-border-color rounded-xl md:space-y-4">
-        <h3 class="gap-8 p-4 md:p-8 border border-border-color rounded-xl space-y-2 md:space-y-4">${donationAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
+        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
         <p class="text-sm md:text-base text-text-color">Date: ${d}</p>
     </div>
     `;
