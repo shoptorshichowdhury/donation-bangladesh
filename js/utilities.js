@@ -1,14 +1,3 @@
-//function of sticky navbar
-window.addEventListener("scroll", function () {
-    if (window.scrollY > 0) {
-        document.querySelector("nav").classList.remove("bg-secondary-color");
-        document.querySelector("header").classList.add("bg-white", "bg-opacity-10", "backdrop-blur-lg", "sticky", "top-0", "z-10");
-    } else {
-        document.querySelector("nav").classList.add("bg-secondary-color");
-        document.querySelector("header").classList.remove("bg-white", "bg-opacity-10", "backdrop-blur-lg", "sticky", "top-0", "z-10");
-    }
-});
-
 //function of show-hide section by toggle button
 function toggleBtn(id) {
     // hide all section
