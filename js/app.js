@@ -59,13 +59,13 @@ document.getElementById("noakhali-donation-btn").addEventListener("click", funct
     const newDonationBalance = currentDonationBalance + donationAmount;
 
     //show the new noakhali donation balance
-    document.getElementById("noakhali-donation-balance").innerText = newDonationBalance;
+    document.getElementById("noakhali-donation-balance").innerText = newDonationBalance.toFixed(2);
 
     //cut the donation amount from total balance
     const currentTotalBalance = TotalBalance - donationAmount;
 
     //show the current total balance
-    document.getElementById("total-balance").innerText = currentTotalBalance;
+    document.getElementById("total-balance").innerText = currentTotalBalance.toFixed(2);
     document.getElementById("my_modal_5").showModal();
 
     //show transaction in history section
@@ -74,7 +74,7 @@ document.getElementById("noakhali-donation-btn").addEventListener("click", funct
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="gap-8 p-4 md:p-8 border border-border-color rounded-xl space-y-2 md:space-y-4">
-        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount} Taka is Donated for Flood Relief in Noakhali, Bangladesh</h3>
+        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount.toFixed(2)} Taka is Donated for Flood Relief in Noakhali, Bangladesh</h3>
         <p class="text-sm md:text-base text-text-color">Date: ${d}</p>
     </div>
     `;
@@ -102,13 +102,13 @@ document.getElementById("feni-donation-btn").addEventListener("click", function 
     const newDonationBalance = currentDonationBalance + donationAmount;
 
     //show the new noakhali donation balance
-    document.getElementById("feni-donation-balance").innerText = newDonationBalance;
+    document.getElementById("feni-donation-balance").innerText = newDonationBalance.toFixed(2);
 
     //cut the donation amount from total balance
     const currentTotalBalance = TotalBalance - donationAmount;
 
     //show the current total balance
-    document.getElementById("total-balance").innerText = currentTotalBalance;
+    document.getElementById("total-balance").innerText = currentTotalBalance.toFixed(2);
     document.getElementById("my_modal_5").showModal();
 
     //show transaction in history section
@@ -117,7 +117,7 @@ document.getElementById("feni-donation-btn").addEventListener("click", function 
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="gap-8 p-4 md:p-8 border border-border-color rounded-xl md:space-y-4">
-        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount} Taka is Donated for Flood Relief in Feni, Bangladesh</h3>
+        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount.toFixed(2)} Taka is Donated for Flood Relief in Feni, Bangladesh</h3>
         <p class="text-sm md:text-base text-text-color">Date: ${d}</p>
     </div>
     `;
@@ -146,13 +146,13 @@ document.getElementById("quota-donation-btn").addEventListener("click", function
     const newDonationBalance = currentDonationBalance + donationAmount;
 
     //show the new noakhali donation balance
-    document.getElementById("quota-donation-balance").innerText = newDonationBalance;
+    document.getElementById("quota-donation-balance").innerText = newDonationBalance.toFixed(2);
 
     //cut the donation amount from total balance
     const currentTotalBalance = TotalBalance - donationAmount;
 
     //show the current total balance
-    document.getElementById("total-balance").innerText = currentTotalBalance;
+    document.getElementById("total-balance").innerText = currentTotalBalance.toFixed(2);
     document.getElementById("my_modal_5").showModal();
 
     //show transaction in history section
@@ -161,7 +161,7 @@ document.getElementById("quota-donation-btn").addEventListener("click", function
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="gap-8 p-4 md:p-8 border border-border-color rounded-xl md:space-y-4">
-        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
+        <h3 class="text-base md:text-xl font-bold text-title-color">${donationAmount.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
         <p class="text-sm md:text-base text-text-color">Date: ${d}</p>
     </div>
     `;
