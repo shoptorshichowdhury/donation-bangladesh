@@ -10,7 +10,6 @@ if (blogBtn) {
 const homeBtn = document.getElementById("home");
 if (homeBtn) {
     homeBtn.addEventListener("click", function () {
-        console.log("home-btn clicked");
         window.location.href = "./index.html";
     });
 }
